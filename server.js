@@ -1,5 +1,4 @@
 const express = require("express");
-const config = require('dotenv').config();
 const bots = require("./src/botsData");
 const shuffle = require("./src/shuffle");
 const path = require('path');
@@ -16,12 +15,10 @@ app.use(express.static("public"));
 
 app.use(express.json());
 
-const {ROLLBAR_ACCESS_TOKEN} = config.parsed;
-
 // include and initialize the rollbar library with your access token
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-  accessToken: `${ROLLBAR_ACCESS_TOKEN}`,
+  accessToken: '01390209ad8049e5ae5623401c1dd2c1',
   captureUncaught: true,
   captureUnhandledRejections: true,
 })
