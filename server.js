@@ -36,7 +36,6 @@ app.get('/api/robots', (req,res) =>{
 app.post('/api/robots', (req, res) => {
   rollbar.info('user chose robots')
   res.status(200).send(bots)
-
 })
 
 app.delete('/api/robots/:index', (req, res) => {
